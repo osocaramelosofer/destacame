@@ -68,6 +68,7 @@ DJANGO_APPS = [
     # MY APPS
     "journeys",
     "buses",
+    "routes",
 ]
 THIRD_PARTY_APPS = [
     "crispy_forms",
