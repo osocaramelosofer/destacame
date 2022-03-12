@@ -4,3 +4,5 @@ from django.db import models
 class Journey(models.Model):
     buss = models.IntegerField()
     route = models.IntegerField()
+    passenger = models.IntegerField()
+
