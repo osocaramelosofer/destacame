@@ -35,7 +35,7 @@
   </head>
 
   <body>
-
+    <h1>Central de auto buses Mexico</h1>
     <div class="mb-1">
       <nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container-fluid">
@@ -51,6 +51,9 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'about' %}">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'journeys:list' %}">Journeys</a>
               </li>
               {% if request.user.is_authenticated %}
                 <li class="nav-item">
@@ -92,7 +95,7 @@
       {% endif %}
 
       {% block content %}
-        <p>Use this document as a way to quick start any new project.</p>
+        <p style="text-align: center">Bienvenidos al sitio de tickets de la central de autobuses del estado de Mexico</p>
       {% endblock content %}
 
     </div> <!-- /container -->
