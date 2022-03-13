@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div>
+    <h2>List of passengers</h2>
+      <ul>
+      {% for passenger in passengers %}
+        <li>
+          {{ passenger.name }}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock content %}
