@@ -3,6 +3,12 @@
 {% block content %}
   <div>
     <h2>Lista de todos los Buses</h2>
-  
+    <ul>
+      {% for buss in buses %}
+        <li>
+          {{ buss.id }} - {{ buss.name }}
+        </li>
+      {% endfor %}
+    </ul>
   </div>
 {% endblock content %}
