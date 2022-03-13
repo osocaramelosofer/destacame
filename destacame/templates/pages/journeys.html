@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div>
+    <h2>Todos los viajes disponibles</h2>
+    <ul>
+      {% for journey in journeys %}
+        <li>
+          {{ journey.route.destination }}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock content %}
