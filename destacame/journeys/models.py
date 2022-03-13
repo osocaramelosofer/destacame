@@ -1,7 +1,8 @@
+
 from django.db import models
-from ..buses import Buss
-from ..routes import Route
-from ..persons import Passenger, Driver
+from ..buses.models import Buss
+from ..routes.models import Route
+from ..persons.models import Passenger, Driver
 
 # Create your models here.
 class Journey(models.Model):
