@@ -2,7 +2,6 @@
 Base settings to build other settings files upon.
 """
 from pathlib import Path
-
 import environ
 
 ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
@@ -65,11 +64,6 @@ DJANGO_APPS = [
     "django.contrib.admin",
     "django.forms",
 
-    # MY APPS
-    "journeys",
-    "buses",
-    "routes",
-    "persons",
 ]
 THIRD_PARTY_APPS = [
     "crispy_forms",
@@ -85,6 +79,10 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "destacame.users",
+    "destacame.buses",
+    "destacame.journeys.apps.JourneysConfig",
+    "destacame.routes.apps.RoutesConfig",
+    "destacame.persons.apps.PersonsConfig",
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
