@@ -13,4 +13,4 @@ class Journey(models.Model):
     passenger = models.ForeignKey('persons.Passenger', on_delete=models.CASCADE, null=True, blank=True)
     driver = models.ForeignKey('persons.Driver', on_delete=models.CASCADE, null=True)
     date = models.DateField(null=True, blank=True)
-
+    time = models.TimeField(null=True)
