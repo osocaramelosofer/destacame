@@ -14,3 +14,6 @@ class Journey(models.Model):
     driver = models.ForeignKey('persons.Driver', on_delete=models.CASCADE, null=True)
     date = models.DateField(null=True, blank=True)
     time = models.TimeField(null=True)
+
+    def __str__(self):
+        return f'{self.route.destination}'
