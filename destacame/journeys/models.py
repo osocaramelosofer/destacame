@@ -1,12 +1,12 @@
 import datetime
-
+from django.urls import reverse
 from django.db import models
 
 from ..buses.models import Buss
 from ..routes.models import Route
 from ..persons.models import Passenger, Driver
 
-# Create your models here.
+
 class Journey(models.Model):
     buss = models.ForeignKey('buses.Buss', on_delete=models.CASCADE)
     route = models.ForeignKey('routes.Route', on_delete=models.CASCADE)
@@ -17,3 +17,6 @@ class Journey(models.Model):
 
     def __str__(self):
         return f'{self.route.destination}'
+
+    def get_absolute_url(self):
+        return reverse('journeys:journey_detail', args=[str(self.id)])
