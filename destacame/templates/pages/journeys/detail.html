@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div>
+    Detail Journey
+    <table>
+      <thead>
+        <tr>
+          <th>Buss</th>
+          <th>Route</th>
+          <th>Passenger</th>
+          <th>Driver</th>
+          <th>Date</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td>{{ journey.buss }}</td>
+            <td>{{ journey.route }}</td>
+            <td>{{ journey.passenger }}</td>
+            <td>{{ journey.driver }}</td>
+            <td>{{ journey.date }}</td>
+            <td>{{ journey.time }}</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+{% endblock content %}
