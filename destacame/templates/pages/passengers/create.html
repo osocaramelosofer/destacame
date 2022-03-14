@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div>
+      <form action="{% url 'persons:create-passenger' %}" method='post'>{% csrf_token %}
+
+        <label for="name">user name</label>
+        <input id="name" type="text" name="name" placeholder="name"/>
+
+        <input type="submit" value="OK">
+    </form>
+  </div>
+{% endblock content %}

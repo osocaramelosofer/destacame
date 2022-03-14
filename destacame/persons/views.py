@@ -10,6 +10,17 @@ class ListPassengers(ListView):
     template_name = 'pages/passengers/list.html'
 
 
+def create_passenger(request):
+    if request.method == 'POST':
+        name = request.POST.get('name', '')
+
+        if name:
+            new_user = Passenger(name=name)
+            new_user.save()
+
+    return render(request, 'pages/passengers/create.html')
+
+
 class ListDrivers(ListView):
     model = Driver
     context_object_name = 'drivers'
