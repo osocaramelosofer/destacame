@@ -3,12 +3,33 @@
 {% block content %}
   <div>
     <h2>Todos los viajes disponibles</h2>
-    <ul>
-      {% for journey in journeys %}
-        <li>
-          {{ journey.route.destination }}
-        </li>
-      {% endfor %}
-    </ul>
+    <table cellspacing="2" cellpadding="2" border="1" bgcolor=dddddd>
+      <thead>
+        <tr>
+          <th>Buss</th>
+          <th>Route</th>
+          <th>Passenger</th>
+          <th>Driver</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for journey in journeys %}
+          <tr>
+            <td>{{ journey.buss }}</td>
+            <td>{{ journey.route }}</td>
+            <td>{{ journey.passenger }}</td>
+            <td>{{ journey.driver }}</td>
+            <td>{{ journey.date }}</td>
+            <td>{{ journey.time }}</td>
+            <td>
+              <a href="{% url 'journeys:journey_detail' journey.pk %}">Edit</a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   </div>
 {% endblock content %}
