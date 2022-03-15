@@ -6,9 +6,10 @@
       <ul>
       {% for driver in drivers %}
         <li>
-          {{ driver.name }}
+          <a href="{% url 'persons:driver_detail' driver.pk %}">{{ driver.name }}</a>
         </li>
       {% endfor %}
     </ul>
+    <a href="{% url 'persons:driver_new' %}">Add new driver</a>
   </div>
 {% endblock content %}

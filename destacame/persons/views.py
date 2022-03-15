@@ -24,6 +24,12 @@ class PassengerCreateView(CreateView):
     fields = ['name']
 
 
+class DriverCreate(CreateView):
+    model = Driver
+    template_name = 'pages/drivers/create.html'
+    fields = ['name']
+
+
 def create_passenger(request):
     if request.method == 'POST':
         name = request.POST.get('name', '')
@@ -38,6 +44,11 @@ def create_passenger(request):
 class PassengerDetail(DetailView):
     model = Passenger
     template_name = 'pages/passengers/detail.html'
+
+
+class DriverDetail(DetailView):
+    model = Driver
+    template_name = 'pages/drivers/detail.html'
 
 
 class PassengerEdit(UpdateView):
