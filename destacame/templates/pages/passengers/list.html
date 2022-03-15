@@ -6,9 +6,11 @@
       <ul>
       {% for passenger in passengers %}
         <li>
-          {{ passenger.name }}
+          <a href="{% url 'persons:passenger_edit' passenger.pk %}">{{ passenger.name }}</a>
         </li>
       {% endfor %}
     </ul>
+
+    <button><a href="{% url 'persons:passenger_new' %}">Add Passenger</a></button>
   </div>
 {% endblock content %}
