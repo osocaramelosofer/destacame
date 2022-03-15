@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div>
+      <form action="{% url 'create_employee' %}" method='post'>{% csrf_token %}
+
+        <label for="user_name">user name</label>
+        <input id="user_name" type="text" name="user_name" placeholder="name"/>
+
+        <div>
+            <label for="rfc">rfc</label>
+            <input id="rfc" type="text" name="rfc" placeholder="rfc name"/>
+        </div>
+        <div>
+            <label for="contract">contract name</label>
+            <input id="contract" type="text" name="contract" placeholder="contract"/>
+        </div>
+        {% comment %} <input id="your_name" type="text" name="your_name" value="{{ current_name }}"> {% endcomment %}
+        <input type="submit" value="OK">
+
+    </form>
+  </div>
+{% endblock content %}
