@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView
 from django.views.generic.edit import CreateView
+from django.urls import reverse_lazy
 
 from .models import Passenger, Driver
 
@@ -45,7 +46,7 @@ class PassengerEdit(UpdateView):
     fields = ['name']
 
 
-# class PassengerDelete(DeleteView):
-#     model = Passenger
-#     template_name = 'pages/passengers/delete.html'
-#     success_url = 'persons:list-passengers'
+class PassengerDelete(DeleteView):
+    model = Passenger
+    template_name = 'pages/passengers/delete.html'
+    success_url = reverse_lazy('persons:list-passengers')
