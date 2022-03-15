@@ -3,7 +3,7 @@
 {% block content %}
   <div>
     <h2>Driver detail</h2>
-      <p>Passenger Name: {{ driver.name }}</p>
+      <p>Driver Name: {{ driver.name }}</p>
       <a href="{% url 'persons:driver_edit' driver.pk %}">+ Edit Driver</a>
       <p><a href="{% url 'persons:driver_delete' driver.pk %}">- Delete Driver</a></p>
   </div>

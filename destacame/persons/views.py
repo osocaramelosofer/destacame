@@ -57,7 +57,19 @@ class PassengerEdit(UpdateView):
     fields = ['name']
 
 
+class DriverEdit(UpdateView):
+    model = Driver
+    template_name = 'pages/drivers/edit.html'
+    fields = ['name']
+
+
 class PassengerDelete(DeleteView):
     model = Passenger
     template_name = 'pages/passengers/delete.html'
     success_url = reverse_lazy('persons:list-passengers')
+
+
+class DriverDelete(DeleteView):
+    model = Driver
+    template_name = 'pages/drivers/delete.html'
+    success_url = reverse_lazy('persons:list-drivers')

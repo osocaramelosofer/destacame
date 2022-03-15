@@ -4,8 +4,8 @@ from .views import (
     ListPassengers, ListDrivers,
     create_passenger, PassengerCreateView, DriverCreate,
     PassengerDetail, DriverDetail,
-    PassengerEdit,
-    PassengerDelete,
+    PassengerEdit, DriverEdit,
+    PassengerDelete, DriverDelete
 )
 
 app_name = "persons"
@@ -21,6 +21,8 @@ urlpatterns = [
     path("driver-detail/<int:pk>", DriverDetail.as_view(), name="driver_detail"),
 
     path("edit-passenger/<int:pk>", PassengerEdit.as_view(), name="passenger_edit"),
+    path("edit-driver/<int:pk>", DriverEdit.as_view(), name="driver_edit"),
 
     path("delete-passenger/<int:pk>", PassengerDelete.as_view(), name="passenger_delete"),
+    path("delete-driver/<int:pk>", DriverDelete.as_view(), name='driver_delete'),
 ]
