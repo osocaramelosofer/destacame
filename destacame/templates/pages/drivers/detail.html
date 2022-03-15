@@ -4,7 +4,7 @@
   <div>
     <h2>Driver detail</h2>
       <p>Passenger Name: {{ driver.name }}</p>
-{#      <a href="{% url 'persons:passenger_edit' passenger.pk %}">+ Edit Passenger</a>#}
-{#      <p><a href="{% url 'persons:passenger_delete' passenger.pk %}">- Delete Passenger</a></p>#}
+      <a href="{% url 'persons:driver_edit' driver.pk %}">+ Edit Driver</a>
+      <p><a href="{% url 'persons:driver_delete' driver.pk %}">- Delete Driver</a></p>
   </div>
 {% endblock content %}
