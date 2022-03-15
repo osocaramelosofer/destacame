@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div>
+    <h2>PersonDetail</h2>
+      <p>Passenger Name: {{ passenger.name }}</p>
+      <a href="{% url 'persons:passenger_edit' passenger.pk %}">+ Edit Passenger</a>
+{#      <p><a href="{% url 'persons:passenger_delete' passenger.pk %}">- Delete Passenger</a></p>#}
+  </div>
+{% endblock content %}
