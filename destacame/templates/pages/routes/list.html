@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div>
+    <h2>List of all routes</h2>
+    <ul>
+      {% for route in routes %}
+        <li>
+          <a href="{% url 'routes:detail_route' route.pk %}"> origin: {{ route.origin }}  destination: {{ route.destination }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <button>
+      <a href="{% url 'routes:create_route' %}">Add new route</a>
+    </button>
+  </div>
+{% endblock content %}

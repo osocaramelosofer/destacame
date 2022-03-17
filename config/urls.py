@@ -19,6 +19,7 @@ urlpatterns = [
     path("journeys/", include("destacame.journeys.urls", namespace="journeys")),
     path("buses/", include("destacame.buses.urls", namespace="buses")),
     path("persons/", include("destacame.persons.urls", namespace="persons")),
+    path("routes/", include("destacame.routes.urls", namespace="routes")),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
