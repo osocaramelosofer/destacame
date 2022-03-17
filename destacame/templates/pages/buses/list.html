@@ -6,7 +6,7 @@
     <ul>
       {% for buss in buses %}
         <li>
-          {{ buss.id }} - {{ buss.name }}
+          <a href="{% url 'buses:buss_detail' buss.pk %}">{{ buss.id }} - {{ buss.name }}</a>
         </li>
       {% endfor %}
     </ul>
